@@ -1,0 +1,171 @@
+#plant-type-heading {
+    background-image: url(./../img/plant-list-bg.jpg);
+    background-size: cover;
+    background-position: 10% 54%;
+    @include hero-headings;
+}
+#planttype-name {
+    padding: 35px 45px 0;
+    font-family: $headingfont;
+    font-weight: 400;
+    font-size: 25px;
+}
+#plant-type-container {
+    padding: 35px 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .plant-post-container {
+        cursor: pointer;
+        width: 47%;
+        padding: 10px;
+        background-color: $backgroundgreen;
+        margin: 10px 5px 20px;
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+        transition: all .3s ease-in-out;
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+        span {
+            background-color: $coral;
+            color: $white;
+            border-radius: 15px; 
+            margin: 0px 5px 5px 0;
+            padding: 2px 8px;
+            font-size: 10px;
+            font-family: $mainfont;
+        }
+        h2 {
+            font-family: $headingfont;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .content {
+            h2 {
+                font-family: $secondfont;
+                font-size: 16px;
+                font-weight: 200;
+                margin-bottom: 5px;
+            }
+            p {
+                display: none;
+                font-family: $mainfont;
+                font-size: 12px;
+                line-height: 13px;
+                margin-bottom: 10px;
+            }
+        }
+        img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
+    }
+    .plant-post-container:hover {
+        background-color: $backgroundgreenintense;
+    }
+}
+#planttype-back-btn-container {
+    padding: 0 45px 50px;
+    a {
+        text-decoration: none;
+    }
+    button {
+        @include button;
+        background-color: $lightgreen;
+        display: flex;
+        align-content: center;
+        svg {
+            margin-right: 5px;
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    #plant-type-heading {
+        padding: 42px;
+    }
+    #planttype-name {
+        padding: 35px 80px 0;
+    }
+    #plant-type-container {
+        padding: 35px 80px;
+        .plant-post-container {
+            width: 30%;
+        }
+    }
+    #planttype-back-btn-container {
+        padding: 0 80px 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #plant-type-heading {
+        padding: 50px;
+        font-size: 50px;
+    }
+    #planttype-name {
+        padding: 50px 170px 0;
+        font-size: 30px;
+    }
+    #plant-type-container {
+        padding: 35px 170px;
+        .plant-post-container {
+            width: 30%;
+            h2 {
+                font-size: 25px;
+            }
+            .content {
+                h2 {
+                    font-size: 20px;
+                }
+                p {
+                    display: block;
+                    font-size: 14px;
+                }
+            }
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+    #planttype-back-btn-container {
+        padding: 0 170px 50px;
+        button {
+            font-size: 20px;
+            svg {
+                font-size: 25px;
+            }
+        }
+    } 
+}
+
+@media screen and (min-width: 1440px) {
+    #plant-type-heading {
+        padding: 80px;
+        font-size: 60px;
+    }
+    #planttype-name {
+        padding: 50px 170px 0;
+        font-size: 35px;
+    }
+    #plant-type-container {
+        padding: 35px 170px;
+        .plant-post-container {
+            width: 23%;
+            h2 {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1600px) {
+    #plant-type-container {
+        .plant-post-container {
+            width: 19%;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+#hm-pg-gallery {
+    margin-bottom: 50px;
+    h2 {
+        @include home-headings;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    #gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        img {
+            width: 50%;
+        }
+        #roses {
+            padding: 0 2px 2px 0;
+        }
+        #landscape {
+            padding: 0 0 2px 2px;
+        }
+        #plants {
+            padding: 2px 2px 0 0;
+        }
+        #delivery {
+            padding: 2px 0 0 2px;
+        }
+    }
+    a {
+        text-decoration: none;
+        font-size: 16px;
+        margin: auto;
+        button {
+            @include button;
+            background-color: $lightgreen;
+            display: flex;
+            margin: auto;
+            align-items: center;
+            svg {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    #hm-pg-gallery {
+        #gallery-container {
+            img {
+                width: 25%;
+            }
+            #roses {
+                padding: 0 2px 0 0;
+            }
+            #landscape {
+                padding: 0 2px 0 2px;
+            }
+            #plants {
+                padding: 0 2px 0 2px ;
+            }
+            #delivery {
+                padding: 0 0 0 2px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    #hm-pg-gallery {
+        h2 {
+            font-size: 35px;
+            margin: 70px 40px;
+        }
+        button {
+            font-size: 25px;
+        }
+        button:hover {
+            background-color: $darkgreen;
+        }
+    }
+}
+@media screen and (min-width: 1440px) {
+    #hm-pg-gallery {
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        margin-bottom: 100px;
+        margin-top: 60px;
+        h2 {
+            width: 100%;
+            font-size: 35px;
+            margin-bottom: 70px;
+        }
+        #gallery-container {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        button {
+            font-size: 25px;
+        }
+        button:hover {
+            background-color: $darkgreen;
+        }
+    }
+}

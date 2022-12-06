@@ -1,0 +1,296 @@
+#services-heading {
+    background-image: url(./../img/services-bg.jpg);
+    background-size: cover;
+    background-position: 10% 54%;
+    @include hero-headings;
+}
+#services-page {
+    padding: 35px 45px 0;
+    #services-heading-text {
+        font-size: 16px;
+        font-family: $mainfont;
+        text-align: left;
+        background-color: $backgroundgreen;
+        padding: 20px;
+    }
+    #services-OTP-container {
+        margin: 30px 0 35px;
+        h3 {
+            @include second-headings;
+        }
+        a {
+            text-decoration: none;
+        }
+        #plantsupply-btn {
+            @include button;
+            background-color: $darkgreen;
+            margin-bottom: 10px;
+        }
+        #gardendesign-btn {
+            @include button;
+            background-color: $lightgreen;
+            margin-bottom: 10px;
+        }
+        #wholesale-btn {
+            @include button;
+            background-color: $lightbrown;
+            margin-bottom: 10px;
+        }
+        #deliveries-btn {
+            @include button;
+            background-color: $darkgreen;
+        }
+        #plantsupply-btn:hover, #deliveries-btn:hover, #wholesale-btn:hover, #gardendesign-btn:hover  {
+            background-color: $coral;
+        }
+    }
+    #services-posts-container {
+        margin-top: 60px;
+        .service-post-section {
+            box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.25);
+            margin-bottom: 70px;
+            background-color: $backgroundbrown;
+            padding: 20px;
+            h3 {
+                font-size: 30px;
+                font-family: $headingfont;
+                font-weight: 400;
+                margin-bottom: 20px;
+            }
+            .content-container {
+                .content {
+                    font-size: 16px;
+                    font-family: $mainfont;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    p {
+                        margin-bottom: 20px;
+                    }
+                    #plantsupply:target, #gardendesign:target, #wholesale:target, #deliveries:target { 
+                        scroll-margin-top: 100px;
+                    }
+                    figure {
+                        width: 100%;
+                        margin-bottom: 20px;
+                        height: 200px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .wps1, .wps2 {
+                        width: 49%;
+                    }
+                }
+            }
+            a {
+                text-decoration: none;
+            }
+            button {
+                @include button;
+                background-color: $coral;
+            }
+            button:hover {
+                background-color: $lightgreen;
+            }
+        }
+    }
+    //========================================
+    //          Buttons
+    //========================================
+    #button-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        a {
+            text-decoration: none;
+        }
+        #services-back-btn {
+            @include button;
+            background-color: $darkgreen;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            margin-bottom: 10px;
+            svg {
+                margin-right: 5px;
+                font-size: 20px;
+            }
+        }
+        #services-back-btn:hover {
+            background-color: $lightgreen;
+        }
+        #services-toabout-btn {
+            @include button;
+            background-color: $lightgreen;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            svg {
+                margin-left: 5px;
+                font-size: 20px;
+            }
+        }
+        #services-toabout-btn:hover {
+            background-color: $darkgreen;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #services-heading {
+        padding: 42px;
+    }
+    #services-page {
+        padding: 35px 80px 0;
+        #services-posts-container {
+            margin-top: 80px;
+            .service-post-section {
+                .content-container {
+                    .content {
+                        figure {
+                            height: 250px;
+                        }
+                        .wps1, .wps2 {
+                            width: 49%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #services-heading {
+        padding: 50px;
+        font-size: 50px;
+    }
+    #services-page {
+        padding: 50px 170px 0;
+        #services-heading-text {
+            font-size: 19px;
+        }
+        #services-OTP-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            h3 {
+                width: 100%;
+                font-size: 30px;
+            }
+            #plantsupply-btn, #gardendesign-btn, #wholesale-btn, #deliveries-btn  {
+                font-size: 20px;
+            }
+        }
+        #services-posts-container {
+            margin-top: 90px;
+            .service-post-section {
+                margin-bottom: 100px;
+                h3 {
+                    font-size: 30px;
+                    margin-bottom: 40px;
+                }
+                .content-container {
+                    .content {
+                        p {
+                            margin-bottom: 30px;
+                        }
+                        figure {
+                            height: 300px;
+                            margin-bottom: 30px;
+                        }
+                        .wps1, .wps2 {
+                            width: 49%;
+                        }
+                        .gd1, .gd2 {
+                            width: 49%;
+                        }
+                    }
+                }
+                button {
+                    font-size: 20px;
+                }
+            }
+        }
+        //========================================
+        //          Buttons
+        //========================================
+        #button-container {
+            #services-back-btn {
+                font-size: 20px;
+                svg {
+                    font-size: 25px;
+                }
+            }
+            #services-toabout-btn {
+                font-size: 20px;
+                svg {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #services-heading {
+        padding: 80px;
+        font-size: 60px;
+    }
+    #services-page {
+        padding: 50px 250px 0;
+        #services-heading-text {
+            font-size: 20px;
+            padding: 30px;
+        }
+        #services-OTP-container {
+            max-width: 940px;
+            margin-left: auto;
+            margin-right: auto;
+            h3 {
+                font-size: 35px;
+            }
+            #plantsupply-btn, #gardendesign-btn, #wholesale-btn, #deliveries-btn  {
+                font-size: 20px;
+            }
+        }
+        #services-posts-container {
+            margin-top: 100px;
+            .service-post-section {
+                margin-bottom: 100px;
+                padding: 50px 30px;
+                h3 {
+                    font-size: 35px;
+                    margin-bottom: 40px;
+                }
+                .content-container {
+                    .content {
+                        p {
+                            font-size: 19px;
+                        }
+                        figure {
+                            height: 400px;
+                            padding: 0 50px;
+                        }
+                        .wps1 {
+                            padding: 0 0 0 50px;
+                        }
+                        .wps2 {
+                            padding: 0 50px 0 0;
+                        } 
+                        .gd1 {
+                            padding: 0 0 0 50px;
+                        } 
+                        .gd2 {
+                            padding: 0 50px 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

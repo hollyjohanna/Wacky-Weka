@@ -1,0 +1,196 @@
+#hm-pg-services-container {
+    a {
+        text-decoration: none;
+    }
+    h2 {
+        @include home-headings
+    }
+    h2:hover {
+        color: $darkgreen;
+    }
+    .hm-pg-services {
+        .hm-pg-services-image {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            margin-bottom: 4px;
+            overflow: hidden;
+            img {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: all .3s ease-in-out;
+            }
+            .hm-pg-img-overlay {
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0.3);
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                transition: all .3s ease-in-out;
+                .hm-pg-services-title {
+                    margin: auto;
+                    text-align: center;
+                    h3 {
+                        background-color: $white;
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                        width: 100%;
+                        margin: auto;
+                        font-family: $secondfont;
+                        font-size: 20px;
+                        font-weight: 100;
+                        color: $black;
+                    }
+                    p {
+                        display: none;
+                    }
+                }
+            }
+    
+        }
+        .hm-pg-services-image:hover {
+            img {
+                scale: 1.1;
+            }
+            .hm-pg-img-overlay {
+                background-color: rgba(255, 255, 255, 0);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #hm-pg-services-container  {
+        .hm-pg-services {
+            display: flex;
+            flex-wrap: wrap;
+            .hm-pg-services-image {
+                width: 50%;
+                height: 170px;
+            }
+            .services-gardendesign, .services-delivery {
+                padding-right: 2px;
+            }
+            .services-wholesale, .services-plantsupply {
+                padding-left: 2px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #hm-pg-services-container  {
+        h2 {
+            font-size: 35px;
+            margin: 70px 50px;
+        }
+        .hm-pg-services {
+            display: flex;
+            flex-wrap: wrap;
+            .hm-pg-services-image {
+                width: 25%;
+                height: 350px;
+                .hm-pg-img-overlay {
+                    .hm-pg-services-title {
+                        max-height: 44px;
+                        transition: all .3s ease-in-out;
+                        h3 {
+                            width: 83%;
+                            margin: auto;
+                        }
+                        p {
+                            display: block;
+                            color: black;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all .3s ease-in-out;
+                            padding: 15px;
+                            margin: 20px 30px;
+                            font-family: $mainfont;
+                            font-size: 14px;
+                            background: rgba(255, 255, 255, 0.861);
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+            .hm-pg-services-image:hover {
+                .hm-pg-img-overlay {
+                    .hm-pg-services-title {
+                        max-height: 130px;
+                        p {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+            .services-gardendesign {
+                padding-right: 2px;
+            }
+            .services-wholesale {
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            .services-delivery {
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            .services-plantsupply {
+                padding-left: 2px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #hm-pg-services-container  {
+        h2 {
+            margin: 100px 50px 70px;
+        }
+        .hm-pg-services {
+            display: flex;
+            flex-wrap: wrap;
+            .hm-pg-services-image {
+                width: 25%;
+                height: 400px;
+                .hm-page-img-overlay {
+                    .hm-pg-services-title {
+                        p {
+                            display: block;
+                            color: black;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all .3s ease-in-out;
+                            padding: 20px;
+                            margin: 20px;
+                            font-family: $mainfont;
+                            font-size: 14px;
+                            background: white;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+            .services-gardendesign {
+                padding-right: 2px;
+            }
+            .services-wholesale {
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            .services-delivery {
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            .services-plantsupply {
+                padding-left: 2px;
+            }
+        }
+    }
+}

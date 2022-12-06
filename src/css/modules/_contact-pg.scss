@@ -1,0 +1,320 @@
+#contact-heading {
+    background-image: url(./../img/landscape-contact.jpg);
+    background-size: cover;
+    background-position: 10% 20%;
+    @include hero-headings;
+}
+#contact-text {
+    font-size: 19px;
+    font-family: $mainfont;
+    margin: 35px 45px 50px;
+    padding: 20px;
+    background-color: $backgroundgreen;
+}
+#contact-form-and-info-container {
+    #reach-out-container {
+        margin: 0 45px 50px;
+        h2 {
+            font-weight: 400;
+            font-size: 30px;
+            font-family: $headingfont;
+            margin-bottom: 30px;
+        }
+        .reach-out-item {
+            margin-bottom: 20px;
+            .heading-container {
+                display: flex;
+                flex-wrap: wrap;
+                svg {
+                    margin-right: 10px;
+                    font-size: 25px;
+                }
+                h3 {
+                    @include second-headings;
+                    margin-bottom: 10px;
+                }
+            }
+            p {
+                font-family: $mainfont;
+                font-size: 16px;
+            }
+            #reach-out-socials {
+                margin-top: 10px;
+                svg {
+                    color: $lightgreen;
+                    cursor: pointer;
+                    font-size: 30px;
+                    margin-right: 10px;
+                    transition: all .3s ease-in-out;
+                }
+                svg:hover {
+                    color: $coral;
+                }
+            }
+        }
+    }
+    #contact-form-container {
+        background-color: $backgroundgreen;
+        padding: 50px 45px;
+        h2, h3 {
+            font-weight: 400;
+            font-size: 30px;
+            font-family: $headingfont;
+            margin-bottom: 30px;
+        }
+        p {
+            font-family: $mainfont;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        #refresh-contact-form-btn {
+            @include button;
+            background-color: $lightgreen;
+        }
+        #refresh-contact-form-btn:hover {
+            background-color: $darkgreen;
+        }
+        #form-container {
+            label {
+                font-family: $secondfont;
+                font-size: 20px;
+                font-weight: 200;
+            }
+            input, select, textarea {
+                width: 100%;
+                margin: 5px 0 10px;
+                padding: 5px;
+                border-radius: 5px;
+                border: 1px solid black;
+                font-family: $mainfont;
+                font-size: 16px;
+            }
+            textarea {
+                height: 100px;
+            }
+            button {
+                @include button;
+                background-color: $lightgreen;
+            }
+            button:hover {
+                background-color: $darkgreen;
+            }
+        }
+    }
+}
+#location-container {
+    margin: 50px 45px;
+    #location-text {
+        margin-bottom: 10px;
+        h2 {
+            font-weight: 400;
+            font-size: 30px;
+            font-family: $headingfont;
+            margin-bottom: 30px; 
+        }
+        .location-heading-container {
+            display: flex;
+            flex-wrap: wrap;
+            svg {
+                font-size: 25px;
+                margin-right: 10px;
+            }
+            h4 {
+                display: inline-block;
+                font-family: $secondfont;
+                font-size: 25px;
+                font-weight: 200; 
+                margin-bottom: 10px;
+            }
+        }
+        p {
+            font-family: $mainfont;
+            font-size: 16px;
+            line-height: 18px;
+        }
+        #opening-hours {
+            margin-bottom: 30px;
+        }
+    }
+    img {
+        width: 100%;
+        margin-top: 20px;
+        border: .5px solid black;
+        box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+    }
+    a {
+        text-decoration: none;
+    }
+    button {
+        @include button;
+        margin-top: 20px;
+        background-color: $lightgreen;
+    }
+    button:hover {
+        background-color: $darkgreen;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #contact-heading {
+        padding: 42px;
+    }
+    #contact-text {
+        margin: 35px 80px 50px;
+    }
+    #contact-form-and-info-container {
+        #reach-out-container {
+            margin: 0 80px 50px;
+        }
+        #contact-form-container {
+            padding: 50px 80px;
+        }
+    }
+    #location-container {
+        margin: 50px 80px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #contact-heading {
+        padding: 50px;
+        font-size: 50px;
+    }
+    #contact-text {
+        margin: 50px 170px 70px;
+    }
+    #contact-form-and-info-container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin: 0 70px 50px;
+        #reach-out-container {
+            width: 40%;
+            margin: 0;
+            .reach-out-item {
+                margin-bottom: 50px;
+            }
+        }
+        #contact-form-container {
+            padding: 0;
+            background-color: transparent;
+            width: 50%;
+            #form-container {
+                button {
+                    font-size: 20px;
+                }
+            }
+            #refresh-contact-form-btn {
+                font-size: 20px;
+            }
+        }
+    }
+    #location-container {
+        padding: 100px 80px;
+        margin: 0;
+        background-color: $backgroundgreen;
+        #location-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 670px;
+            margin: auto;
+            #location-text {
+                width: 26%;
+            }
+            #map-container {
+                width: 70%;
+                img {
+                    margin: 0;
+                }
+                button {
+                    font-size: 20px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #contact-heading {
+        padding: 80px;
+        font-size: 60px;
+    }
+    #contact-text {
+        margin: 50px 250px 70px;
+        font-size: 20px;
+        padding: 30px;
+    }
+    #contact-form-and-info-container {
+        margin: 0 170px 50px;
+        #reach-out-container {
+            h2 {
+                font-size: 35px;
+            }
+            .reach-out-item {
+                p {
+                    font-size: 19px;
+                }
+                #reach-out-socials {
+                    svg {
+                        font-size: 40px;
+                        margin-right: 20px;
+                    }
+                }
+                .heading-container {
+                    h3 {
+                        font-size: 30px;
+                    }
+                    svg {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        #contact-form-container {
+            h2 {
+                font-size: 35px;
+            }
+            p {
+                font-size: 19px;
+            }
+            #form-container {
+                button {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    #location-container {
+        padding: 100px 80px;
+        #location-content {
+            max-width: 950px;
+            margin: auto;
+            #location-text {
+                width: 25%;
+                h2 {
+                    font-size: 35px;
+                }
+                .location-heading-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    svg {
+                        font-size: 30px;
+                        margin-right: 10px;
+                    }
+                    h4 {
+                        font-size: 30px;
+                    }
+                }
+                p {
+                    font-size: 19px;
+                    line-height: 20px;
+                }
+            }
+            #map-container {
+                width: 75%;
+            }
+        }
+    }
+}

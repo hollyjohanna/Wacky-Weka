@@ -1,0 +1,80 @@
+//=======================================================
+//                          FONTS
+//=======================================================
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@200&family=Fira+Sans+Extra+Condensed:wght@100;200;300&family=Raleway:wght@200;300;400;500&display=swap');
+$mainfont: 'Catamaran', sans-serif;
+$headingfont: 'Raleway', sans-serif;
+$secondfont: 'Fira Sans Extra Condensed', sans-serif;
+
+//=======================================================
+//                         COLOURS
+//=======================================================
+$lightbrown: #a66f3f;
+$darkbrown: #482807;
+$backgroundbrown: #F6F1EC;
+$lightgreen: #9fbd73;
+$backgroundgreen: #F5F8F1;
+$backgroundgreenintense: #E7EDDE;
+$darkgreen: #3b6031;
+$coral: #fa7d66;
+$black: #000000;
+$white: #ffffff;
+
+//=======================================================
+//                          MIXINS
+//=======================================================
+@mixin button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    display: block;
+    font-family: $headingfont;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+@mixin sm-padding {
+    padding: 2rem;
+}
+
+@mixin md-padding {
+    padding: 3rem;
+}
+
+@mixin lg-padding {
+    padding: 4rem;
+}
+
+@mixin links {
+    text-decoration: none;
+    font-family: $headingfont;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+@mixin home-headings {
+    font-family: $headingfont;
+    font-weight: 400;
+    font-size: 30px;
+    color: $black;
+    text-align: center;
+    margin: 40px;
+    transition: all .3s ease-in-out;
+}
+
+@mixin hero-headings {
+    font-family: $headingfont;
+    font-weight: 400;
+    font-size: 35px;
+    text-align: center;
+    color: $black;
+    padding: 30px;
+}
+
+@mixin second-headings {
+    font-size: 25px;
+    font-weight: 200;
+    font-family: $secondfont;
+    margin-bottom: 20px;
+}

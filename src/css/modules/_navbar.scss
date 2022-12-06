@@ -1,0 +1,211 @@
+.navbar {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: $lightgreen;
+    #nav-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+        #desktop-ul {
+            display: none;
+        }
+        #logo {
+            font-size: 30px;
+            text-align: left;
+            width: 50%;
+            a {
+                @include links;
+                color: $white;
+            }
+            a:hover {
+                color: $black;
+            }
+        }
+        #icon-container {
+            display: flex;
+            justify-content: flex-end;
+            width: 50%;
+            #search-btn {
+                align-items: center;
+                display: flex;
+                justify-content: flex-end;
+                font-size: 30px;
+                @include links;
+                color: $white;
+            }
+            #search-btn:hover {
+                color: $black;
+            }
+    
+            #nav-menu {
+                align-items: center;
+                display: flex;
+                justify-content: flex-end;
+                font-size: 40px;
+                @include links;
+                color: $white;
+                margin-left: 20px;
+            }
+            #nav-menu:hover {
+                color: $black;
+            }
+        }
+    
+        #right-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+#search-container {
+    padding: 25px;
+    background-color: $white;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    label {
+        font-family: $headingfont;
+        font-size: 25px;
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    input {
+        width: 90%;
+        border: none;
+        font-family: $secondfont;
+        font-size: 16px;
+        border-bottom: 1px solid;
+    }
+    input:focus,
+    select:focus,   
+    textarea:focus,
+    button:focus {
+        outline: none;
+    }
+    svg {
+        width: 10%;
+        font-size: 18px;
+    }
+}
+
+.outer-container {
+    overflow: hidden;
+    max-height: 90px;
+    transition: all .3s ease-in-out;
+}
+
+.active {
+    max-height: 220px;
+    transition: all .3s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+    .outer-container {
+        max-height: 90px;
+    }
+    
+    .active {
+        max-height: 220px;
+    }
+    #search-container {
+        input {
+            width: 94%;
+        }
+        svg {
+            width: 6%;
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .navbar {
+        display: flex;
+        justify-content: center;
+        #nav-container {
+            padding: 22.25px 30px;
+            #logo {
+                width: 76px;
+                margin-right: 200px;
+            }
+            #desktop-ul {
+                display: flex;
+                align-items: center;
+                li {
+                    display: inline-block;
+                    svg {
+                        font-size: 30px;
+                        @include links;
+                        color: $white;
+                        margin-left: 30px;
+                        display: block;
+                        position: relative;
+                        padding: 0.2em 0;
+                    }
+                    a {
+                        @include links;
+                        font-size: 20px;
+                        color: $white;
+                        text-transform: uppercase;
+                        margin-left: 70px;
+                        display: block;
+                        position: relative;
+                        padding: 0.2em 0;
+                    }
+                    a:hover , svg:hover {
+                        color: $black;
+                    }
+                }
+                #home-link {
+                    display: none;
+                }
+            }
+            #icon-container {
+                display: none;
+            } 
+        }
+    }
+    .outer-container {
+        max-height: 90px;
+    }
+    
+    .active {
+        max-height: 220px;
+    }
+    #search-container {
+        max-width: 924px;
+        margin: auto;
+        input {
+            width: 94%;
+        }
+        svg {
+            width: 6%;
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .navbar {
+        #nav-container {
+            padding: 30px;
+            #desktop-ul {
+                #home-link {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .outer-container {
+        max-height: 105px;
+    }
+    
+    .active {
+        max-height: 225px;
+    }
+}

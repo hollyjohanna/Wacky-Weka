@@ -1,0 +1,403 @@
+#about-heading {
+    background-image: url(./../img/about-hero.jpg);
+    background-size: cover;
+    background-position: 10% 54%;
+    @include hero-headings;
+}
+#about-pg {
+    #about-heading-text {
+        font-size: 16px;
+        font-family: $mainfont;
+        text-align: left;
+        margin: 35px 45px 0;
+        background-color: $backgroundgreen;
+        padding: 20px;
+    }
+    #about-OTP-container {
+        padding: 30px 45px 35px;
+        h3 {
+            @include second-headings;
+        }
+        a {
+            text-decoration: none;
+        }
+        #ourstory-btn {
+            background-color: $darkgreen;
+            @include button;
+            margin-bottom: 10px;
+        }
+        #ourstory-btn:hover {
+            background-color: $lightgreen;
+        }
+        #whatwedo-btn {
+            @include button;
+            background-color: $lightgreen;
+        }
+        #whatwedo-btn:hover {
+            background-color: $darkgreen;
+        }
+    }
+    #about-ourstory-container {
+        background-color: $backgroundgreen;
+        padding: 60px 45px;
+        #ourstory-heading {
+            h2 {
+                font-weight: 400;
+                font-size: 30px;
+                font-family: $headingfont;
+                margin-bottom: 20px;
+            }
+            p {
+                font-family: $mainfont;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            img {
+                width: 100%;
+                height: 190px;
+                margin-bottom: 50px;
+                object-fit: cover
+            }
+        }
+        #the-nursery-section {
+            h4 {
+                @include second-headings;
+            }
+            p {
+                font-family: $mainfont;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            img {
+                width: 100%;
+                height: 190px;
+                margin-bottom: 35px;
+                object-fit: cover;
+            }
+        }
+    }
+    #whatwedo-heading {
+        padding: 50px 45px 20px;
+        font-weight: 400;
+        font-size: 30px;
+        font-family: $headingfont;
+    }
+    #whatwedo-text {
+        padding: 0 45px;
+        font-family: $mainfont;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    //========================================
+    //          About Posts
+    //========================================
+    #about-post-container {
+        padding: 60px 45px 0;
+        .about-post-content {
+            margin-bottom: 80px;
+            padding: 10px;
+            h3 {
+                @include second-headings
+            }
+            .content {
+                font-size: 16px;
+                font-family: $mainfont;
+            }
+            img {
+                width: 100%;
+                height: 190px;
+                object-fit: cover;
+                margin-top: 20px;
+            }
+        }
+    }
+    //========================================
+    //          Buttons
+    //========================================
+    #button-container {
+        padding: 0 45px 35px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        a {
+            text-decoration: none;
+        }
+        #about-back-btn {
+            @include button;
+            background-color: $darkgreen;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            margin-bottom: 10px;
+            svg {
+                margin-right: 5px;
+                font-size: 20px;
+            }
+        }
+        #about-back-btn:hover {
+            background-color: $lightgreen;
+        }
+        #about-toservices-btn {
+            @include button;
+            background-color: $lightgreen;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            svg {
+                margin-left: 5px;
+                font-size: 20px;
+            }
+        }
+        #about-toservices-btn:hover {
+            background-color: $darkgreen;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #about-heading {
+        padding: 42px;
+    }
+    #about-pg {
+        #about-heading-text {
+            margin: 35px 80px 0;
+        }
+        #about-OTP-container {
+            padding: 30px 80px 35px;
+        }
+        #about-ourstory-container {
+            padding: 80px 80px;
+            #ourstory-heading {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-bottom: 30px;
+                h2 {
+                    margin-bottom: 30px;
+                    width: 100%;
+                }
+                p {
+                    width: 49%
+                }
+                img {
+                    width: 48%;
+                    height: 450px;
+                }
+            }
+            #the-nursery-section {
+                img {
+                    height: 250px;
+                }
+            }
+        }
+        #whatwedo-heading {
+            padding: 80px 80px 20px;
+        }
+        #whatwedo-text {
+            padding: 0 80px 20px;
+        }
+        //========================================
+        //          About Posts
+        //========================================
+        #about-post-container {
+            padding: 35px 80px;
+            .about-post-content {
+                margin-bottom: 30px;
+                padding: 10px;
+                img {
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                    margin: 0;
+                    padding: 20px 50px;
+                }
+            }
+        }
+        //========================================
+        //          Buttons
+        //========================================
+        #button-container {
+            padding: 0 80px 35px
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #about-heading {
+        padding: 50px;
+        font-size: 50px;
+    }
+    #about-pg {
+        #about-heading-text {
+            margin: 50px 170px 0;
+            font-size: 19px;
+        }
+        #about-OTP-container {
+            padding: 30px 170px 70px;
+            h3 {
+                font-size: 30px;
+            }
+            button {
+                font-size: 20px;
+            }
+            #ourstory-btn {
+                margin-bottom: 20px;
+            }
+        }
+        #about-ourstory-container {
+            padding: 90px 170px 70px;
+            #ourstory-heading {
+                margin-bottom: 50px;
+                h2 {
+                    margin-bottom: 30px;
+                    width: 100%;
+                }
+                p {
+                    width: 49%
+                }
+                img {
+                    width: 48%;
+                    height: 370px;
+                }
+            }
+            #the-nursery-section {
+                img {
+                    height: 280px;
+                }
+            }
+        }
+        #whatwedo-heading {
+            padding: 90px 170px 20px;
+        }
+        #whatwedo-text {
+            padding: 0 170px 20px;
+        }
+        //========================================
+        //          About Posts
+        //========================================
+        #about-post-container {
+            padding: 35px 170px;
+            .about-post-content {
+                margin-bottom: 70px;
+                padding: 0;
+                img {
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                    margin-top: 20px;
+                    padding: 0;
+                }
+            }
+        }
+        //========================================
+        //          Buttons
+        //========================================
+        #button-container {
+            padding: 0 170px 50px;
+            #about-back-btn {
+                font-size: 20px;
+                svg {
+                    font-size: 25px;
+                }
+            }
+            #about-toservices-btn {
+                font-size: 20px;
+                svg {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #about-heading {
+        padding: 80px;
+        font-size: 60px;
+    }
+    #about-pg {
+        #about-heading-text {
+            margin: 50px 250px 0;
+            font-size: 20px;
+            padding: 30px;
+        }
+        #about-OTP-container {
+            padding: 30px 250px 70px;
+            h3 {
+                font-size: 35px;
+            }
+        }
+        #about-ourstory-container {
+            padding: 100px 250px;
+            #ourstory-heading {
+                margin-bottom: 50px;
+                h2 {
+                    margin-bottom: 30px;
+                    width: 100%;
+                    font-size: 35px;
+                }
+                p {
+                    width: 49%;
+                    font-size: 19px;
+                }
+                img {
+                    width: 48%;
+                    height: 390px;
+                }
+            }
+            #the-nursery-section {
+                h4 {
+                    font-size: 30px;
+                }
+                p {
+                    font-size: 19px;
+                }
+                img {
+                    height: 350px;
+                }
+            }
+        }
+        #whatwedo-heading {
+            padding: 100px 250px 20px;
+            font-size: 35px;
+        }
+        #whatwedo-text {
+            padding: 0 250px 20px;
+            font-size: 19px;
+        }
+        //========================================
+        //          About Posts
+        //========================================
+        #about-post-container {
+            padding: 35px 250px;
+            .about-post-content {
+                margin-bottom: 100px;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                h3 {
+                    font-size: 30px;
+                    width: 100%;
+                }
+                .content {
+                    font-size: 19px;
+                    width: 100%;
+                }
+                img {
+                    max-width: 835px;
+                    height: 350px;
+                    object-fit: cover;
+                    margin: auto;
+                    margin-top: 20px;
+                    padding: 0;
+                }
+            }
+        }
+        //========================================
+        //          Buttons
+        //========================================
+        #button-container {
+            padding: 0 250px 50px;
+        }
+    }
+}

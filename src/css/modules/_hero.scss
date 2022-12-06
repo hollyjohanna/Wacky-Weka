@@ -1,0 +1,165 @@
+#hero-container {
+    padding: 50px 40px;
+    background-color: $lightgreen;
+    background-image: url('./../img/wekabackground-update.jpg');
+    background-position: 43% 35%;
+    background-size: cover;
+    height: 500px;
+    text-align: center;
+    h3 {
+        font-family: $secondfont;
+        font-size: 30px;
+        font-weight: 100;
+        color: $white;
+        animation: heading-fade-1 1s;
+        overflow: hidden;
+    }
+    h1, h2 {
+        font-family: $headingfont;
+        font-weight: 400;
+        color: $white;
+        animation: heading-fade-1 1s;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+       font-size: 40px; 
+       margin-bottom: 30px;
+    }
+    p {
+        font-family: $mainfont;
+        font-size: 18px;
+        line-height: 29.52px;
+        font-weight: 200;
+        margin-bottom: 25px;
+        color: $white;
+        animation: hero-fade 2s;
+    }
+    a {
+        text-decoration: none;
+    }
+    button {
+        @include button;
+        background-color: $lightgreen;
+        margin: auto;
+        font-size: 16px;
+        animation: button-fade 3s;
+    }
+    button:hover {
+        background-color: $darkgreen;
+    }
+    // svg {
+    //     display: none;
+    //     animation: hero-fade 2s;
+    // }
+}
+
+@keyframes heading-fade-1 {
+    0% {
+        opacity: 0;
+        margin-top: 70px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@keyframes hero-fade {
+    0% {
+        opacity: 0;
+    }
+    50% { 
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes button-fade {
+    0% {
+        opacity: 0;
+    }
+    50% { 
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+//================================================================
+//                      Media Queries
+//================================================================
+
+@media screen and (min-width: 768px) {
+    #hero-container {
+        padding: 80px;
+        background-position: 44% 5%;
+    background-size: 180%;
+        h3 {
+            font-size: 35px;
+        }
+        h1 {
+            font-size: 60px;
+        }
+        h2 {
+            font-size: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #hero-container {
+        height: 710px;
+        padding: 150px 120px;
+        background-size: 160%;
+        background-position: 40% 26%;
+        h3 {
+            font-size: 40px;
+        }
+        h1 {
+            font-size: 70px;
+        }
+        h2 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 20px;
+        }
+        button {
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+        svg {
+            display: block;
+            margin: auto;
+            font-size: 50px;
+            color: $white;
+            transition: all .3s ease-in-out;
+            cursor: pointer;
+        }
+        svg:hover {
+            color: $lightgreen;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #hero-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 787px;
+        padding: 150px 350px;
+        background-position: 24% 15%;
+        background-size: 120%;
+        p {
+            max-width: 760px;
+        }
+        h1, h2, h3, p, a {
+            width: 100%;
+        }
+    }
+}

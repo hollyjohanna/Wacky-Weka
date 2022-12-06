@@ -1,0 +1,136 @@
+#plant-item-heading {
+    background-image: url(./../img/plant-list-bg.jpg);
+    background-size: cover;
+    background-position: 10% 54%;
+    @include hero-headings;
+}
+#indiv-plant-container {
+    padding: 35px 45px;
+    h2 {
+        font-family: $headingfont;
+        font-size: 30px;
+    }
+    .indiv-plant-content {
+        h2 {
+            font-family: $secondfont;
+            font-size: 25px;
+        }
+        p {
+            font-family: $mainfont;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    .plant-type-pill {
+        color: white;
+        font-family: $mainfont;
+        font-size: 13px;
+        background-color: $coral;
+        border-radius: 20px;
+        padding: 5px 10px;
+        margin-right: 7px;
+        transition: all .3s ease-in-out;
+    }
+    .plant-type-pill:hover {
+        background-color: #e23c1e;
+    }
+    img {
+        margin: 20px 0;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    #indiv-plant-back-btn {
+        @include button;
+        display: flex;
+        align-items: center;
+        background-color: $lightgreen;
+        svg {
+            margin-right: 5px;
+        }
+    }
+    #indiv-plant-back-btn:hover {
+        background-color: $darkgreen;
+    }
+}
+@media screen and (min-width: 768px) {
+    #plant-item-heading {
+        padding: 42px;
+    }
+    #indiv-plant-container {
+        padding: 35px 80px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #plant-item-heading {
+        padding: 50px;
+        font-size: 50px;
+    }
+    #indiv-plant-container {
+        padding: 50px 170px;
+        h2 {
+            font-size: 35px;
+        }
+        .indiv-plant-content {
+            h2 {
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+        }
+        .plant-type-pill {
+            font-size: 16px;
+            border-radius: 20px;
+            padding: 5px 10px;
+            margin-right: 7px;
+        }
+        img {
+            margin: 20px 0;
+            height: 300px;
+        }
+        #indiv-plant-back-btn {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #plant-item-heading {
+        padding: 80px;
+        font-size: 60px;
+    }
+    #indiv-plant-container {
+        padding: 50px 300px 100px;
+        h2 {
+            font-size: 40px;
+        }
+        .indiv-plant-content {
+            h2 {
+                font-size: 35px;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 19px;
+                margin-bottom: 20px;
+            }
+        }
+        .plant-type-pill {
+            font-size: 16px;
+            border-radius: 20px;
+            padding: 5px 10px;
+            margin-right: 7px;
+        }
+        img {
+            margin: 30px 0;
+            height: 400px;
+        }
+    }
+}
